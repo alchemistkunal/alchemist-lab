@@ -1,0 +1,60 @@
+.project {
+    flex: 0 0 calc(33.33% - 20px);
+    margin: 0.5%;
+    position: relative;
+}
+
+.project:hover {
+    opacity: 1;
+}
+
+.project h3{
+    cursor: pointer;
+}
+
+.project::after {
+    content: "+";
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 2.0em;
+}
+
+
+.portfolio-list {
+    list-style-type: none;
+    /* margin-left: 10%;
+    max-width: 90%; */
+    padding-left: 5%;
+}
+
+.portfolio-list li {
+    margin-bottom: 1%;
+    border-bottom: 3px solid #ccc;
+    padding-bottom: 1%;
+}
+
+
+.project-content-image{
+    display: flex;
+    /* width: "100%"; */
+}
+
+@media screen and (max-width: 1200px) {
+    .project-content-image {
+      display: block; /* Change to default display value for smaller screens */
+    }
+  }
+
+.project-content-image img{
+
+    height: auto;
+    width: 25%;
+    object-fit: contain; /* or object-fit: cover; */
+    padding-left: 20px;
+}
+
+.project-image{
+    width: 50%;
+    height: auto;
+}
