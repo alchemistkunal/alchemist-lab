@@ -20,7 +20,7 @@ header {
     margin-bottom: 40px;
 }
 
-.one-liner{
+.one-liner {
     font-size: 30px;
 }
 
@@ -51,7 +51,7 @@ footer {
     margin-top: 4%;
 }
 
-.copyright{
+.copyright {
     font-size: 18px;
 }
 
@@ -60,13 +60,17 @@ footer {
     align-items: center;
 }
 
+
+
 .about-text {
     flex: 1;
 }
-.about-text h2{
+
+.about-text h2 {
     font-size: 30px;
 }
-.about-text p{
+
+.about-text p {
     font-size: 25px;
 
 }
@@ -77,33 +81,21 @@ footer {
 }
 
 .about-profile-image {
-    width: 80%;
+    width: 100%;
     /* Set initial width to 100% */
-    max-width: 200px;
+    max-width: 300px;
     /* Set the maximum width of the image */
     border-radius: 50%;
     margin-top: 10px;
 }
 
-@media (min-width: 600px) {
-    .about-profile-image {
-        max-width: 300px;
-        /* Increase the maximum width for larger screens */
-    }
-}
 
-@media (min-width: 800px) {
-    .about-profile-image {
-        max-width: 400px;
-        /* Further increase the maximum width for even larger screens */
-    }
-}
-
-.portfolio-container{
+.portfolio-container {
     display: flex;
     align-items: normal;
 }
-.portfolio-container h2{
+
+.portfolio-container h2 {
     flex: 1;
     /* margin-right: 40px; */
     /* margin-top: 50px; */
@@ -112,5 +104,107 @@ footer {
 
 
 .construction-icon i {
-color: rgb(58, 48, 146); /* Set the icon color */
+    color: rgb(58, 48, 146);
+    /* Set the icon color */
+}
+
+@media screen and (max-width:1200px){
+    
+    .about-profile-image {
+
+        /* Set initial width to 100% */
+        max-width: 250px;
+        /* Set the maximum width of the image */
+        border-radius: 50%;
+        margin-top: 5px;
+    }
+    .one-liner {
+        font-size: 25px;
+    }
+    .about-text h2 {
+        font-size: 25px;
+    }
+
+    body {
+        font-size: 20px;
+    }
+    
+    .about-text p {
+        font-size: 20px;
+    
+    }
+    .copyright {
+        font-size: 15px;
+    }
+    
+}
+@media screen and (max-width:800px){
+    .about-content {
+        display: flex;
+        flex-direction: column;
+    }
+    .about-content .about-image{
+        order: 0;
+    }
+    .about-content .about-text{
+        order: 1;
+    }
+
+    .about-profile-image {
+
+        /* Set initial width to 100% */
+        max-width: 200px;
+        /* Set the maximum width of the image */
+        border-radius: 50%;
+        margin-top: 5px;
+    }
+    .one-liner {
+        font-size: 22.5px;
+    }
+    .about-text h2 {
+        font-size: 22.5px;
+    }
+
+    body {
+        font-size: 18.5px;
+    }
+    
+    .about-text p {
+        font-size: 18.5px;
+    
+    }
+    .copyright {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width:600px){
+    
+    .about-profile-image {
+
+        /* Set initial width to 100% */
+        max-width: 150px;
+        /* Set the maximum width of the image */
+        border-radius: 50%;
+        margin-top: 5px;
+    }
+    .one-liner {
+        font-size: 20px;
+    }
+    .about-text h2 {
+        font-size: 20px;
+    }
+    body {
+        font-size: 15px;
+    }
+    .about-text p {
+        font-size: 15px;
+    
+    }
+
+    .copyright {
+        font-size: 12px;
+    }
+    
+    
 }

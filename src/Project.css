@@ -8,7 +8,7 @@
     opacity: 1;
 }
 
-.project h3{
+.project h3 {
     cursor: pointer;
 }
 
@@ -35,26 +35,86 @@
 }
 
 
-.project-content-image{
+.project-content-image {
     display: flex;
-    /* width: "100%"; */
+    flex-direction: row;
+
+}
+
+.project-content-image .modal-container {
+    order: 0;
+    /* Change order of the image */
+}
+
+
+
+.project-content-image img {
+    height: auto;
+    width: 250px;
+    object-fit: contain;
+    /* or object-fit: cover; */
+    padding-left: 10px;
+    order: 1;
+    max-width: 80%;
+
+}
+
+
+
+.project-image {
+    width: 50%;
+    height: auto;
 }
 
 @media screen and (max-width: 1200px) {
     .project-content-image {
-      display: block; /* Change to default display value for smaller screens */
+        display: flex;
+        /* Change to default display value for smaller screens */
+        flex-direction: column;
+        /* On smaller screens, switch to column layout */
     }
-  }
 
-.project-content-image img{
+    .project-content-image img {
+        height: auto;
+        max-width: 80%;
+        width: 150px;
 
-    height: auto;
-    width: 25%;
-    object-fit: contain; /* or object-fit: cover; */
-    padding-left: 20px;
+        object-fit: contain;
+        /* or object-fit: cover; */
+        padding-left: 20px;
+        order: 0;
+
+    }
+
+    .project-content-image .modal-container {
+        order: 1;
+        /* Change order of the image */
+    }
+
 }
 
-.project-image{
-    width: 50%;
-    height: auto;
+
+@media screen and (max-width:600px) {
+    .project-content-image {
+        display: flex;
+        /* Change to default display value for smaller screens */
+        flex-direction: column;
+        /* On smaller screens, switch to column layout */
+    }
+
+    .project-content-image img {
+        height: auto;
+        max-width: 60%;
+        width: 110px;
+        object-fit: contain;
+        /* or object-fit: cover; */
+        padding-left: 20px;
+        order: 0;
+
+    }
+
+    .project-content-image .modal-container {
+        order: 1;
+        /* Change order of the image */
+    }
 }
