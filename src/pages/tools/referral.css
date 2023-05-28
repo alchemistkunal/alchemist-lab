@@ -1,0 +1,141 @@
+.referral-container{
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 20px;
+}
+
+.referral-content {
+    margin-left: 5%;
+    align-items: center;
+    display: flex;
+    /* flex-direction: row; */
+    align-items: left;
+}
+.referral-text{
+    max-width: 60%;
+}
+.referral-text h2 {
+    font-size: 30px;
+}
+
+.referral-text p {
+    font-size: 25px;
+    word-wrap: normal; 
+}
+
+.referral-list{
+    columns: 3 auto;
+
+}
+.referral-profile-image {
+    width: 100%;
+    /* Set initial width to 100% */
+    max-width: 300px;
+    /* Set the maximum width of the image */
+    border-radius: 50%;
+    margin-top: 10px;
+}
+
+.referral-username{
+    margin-left: 30%;
+}
+
+.referral-btn{
+    margin-left: 1%;
+}
+
+
+@media screen and (max-width:1200px){
+    
+    .referral-profile-image {
+
+        /* Set initial width to 100% */
+        max-width: 250px;
+        /* Set the maximum width of the image */
+        border-radius: 50%;
+        margin-top: 5px;
+    }
+
+    .referral-text h2 {
+        font-size: 25px;
+    }
+
+    body {
+        font-size: 20px;
+    }
+    
+    .referral-text p {
+        font-size: 20px;
+    
+    }
+    .copyright {
+        font-size: 15px;
+    }
+    
+}
+@media screen and (max-width:800px){
+    .referral-content {
+        display: flex;
+        flex-direction: column;
+    }
+    .referral-content .referral-image{
+        order: 0;
+    }
+    .referral-content .referral-text{
+        order: 1;
+    }
+
+    .referral-profile-image {
+
+        /* Set initial width to 100% */
+        max-width: 200px;
+        /* Set the maximum width of the image */
+        border-radius: 50%;
+        margin-top: 5px;
+    }
+
+    .referral-text h2 {
+        font-size: 22.5px;
+    }
+
+    body {
+        font-size: 18.5px;
+    }
+    
+    .referral-text p {
+        font-size: 18.5px;
+    
+    }
+    .copyright {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width:600px){
+    
+    .referral-profile-image {
+
+        /* Set initial width to 100% */
+        max-width: 150px;
+        /* Set the maximum width of the image */
+        border-radius: 50%;
+        margin-top: 5px;
+    }
+
+    .referral-text h2 {
+        font-size: 20px;
+    }
+    body {
+        font-size: 15px;
+    }
+    .referral-text p {
+        font-size: 15px;
+    
+    }
+
+    .copyright {
+        font-size: 12px;
+    }
+    
+    
+}

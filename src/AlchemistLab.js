@@ -3,11 +3,9 @@ import './AlchemistLab.css';
 import profileImage from './resources/portrait.jpg'; // Replace with the actual path to your profile image
 import Project from './Project'; // Import the Project component
 import './logo.css'
-import fetchData from './fetch_content'
 import axios from 'axios';
-
 import { config } from './resources/config/config.js';
-import fetchHeadlineData from './fetch_content';
+
 
 function importAll(r) {
   return r.keys().map(r);
@@ -58,6 +56,11 @@ function AlchemistLab() {
       <main>
       <div className="one-liner">
         <h1>{refresh  ? "loading..." : headline}</h1>
+        <div className="quote-of-the-week">
+        <div className="quote-box">
+          <p className="quote-text">Thought of the week: Follow your passion!🐾</p>
+        </div>
+      </div>
       </div>
 
         <section id="about">
