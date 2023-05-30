@@ -5,7 +5,7 @@ import Project from './Project'; // Import the Project component
 import './logo.css'
 import axios from 'axios';
 import { config } from './resources/config/config.js';
-
+import lIn from './resources/social-media/lIn.png'; // Replace with the actual path to your profile image
 
 function importAll(r) {
   return r.keys().map(r);
@@ -18,7 +18,7 @@ function AlchemistLab() {
   );
 
   const apiUrl = config.url.API_URL;
-
+  const linkedIn_URL = config.url.LinkedIn_URL;
   const [projects, setProjects] = useState([]);
   const [headline, setHeadline] = useState("");
   const [intro, setIntro] = useState("");
@@ -28,7 +28,7 @@ function AlchemistLab() {
   useEffect(() => {
     // Fetch the list of strings from the API
     setRefresh(true);
-
+    
     axios.get(apiUrl)
       .then(response => {
 
@@ -50,17 +50,23 @@ function AlchemistLab() {
   
   return (
     <div className="container">
-        <header>        
+      <header>        
         <h1>Kunal's Portfolio</h1>
+        <div className="logo-lIn">
+          <a href={linkedIn_URL} target="blank">
+            <img  src={lIn} alt="linkedIn-profile"/>
+          </a>
+        </div>
       </header>
       <main>
       <div className="one-liner">
-        <h1>{refresh  ? "loading..." : headline}</h1>
-        <div className="quote-of-the-week">
-        <div className="quote-box">
-          <p className="quote-text">Thought of the week: Follow your passion!🐾</p>
-        </div>
-      </div>
+
+        {refresh  ? "loading..." : <h1>{headline}</h1>}
+        {/* <div className="quote-of-the-week">
+          <div className="quote-box">
+            <p className="quote-text">Thought of the week: Follow your passion!🐾</p>
+          </div>
+        </div> */}
       </div>
 
         <section id="about">

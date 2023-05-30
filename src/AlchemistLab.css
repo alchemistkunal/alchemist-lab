@@ -4,7 +4,17 @@
     margin-right: 5%;
     padding: 20px;
 }
-
+.container header{
+    display: flex;
+    align-items: normal;
+}
+.container h1{
+    order: 0;
+}
+.container button{
+    order: 1;
+    margin-left: 40%;
+}
 body {
     background-color: hsla(169.06, 100%, 35.49%, 1);
     margin: 0;
@@ -15,9 +25,23 @@ body {
     /* font-family: Neue Hass Grotesk Display;  Open Sans */
 }
 
+.logo-lIn img {
+    float:right;
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    margin: 5px 2px;
+  }
+  
+  .linkedinLogo:hover {
+      opacity: 0.8;
+  }
+  
 
 header {
     text-align: left;
+    justify-content: space-between;
+    align-items: center;
     margin-bottom: 40px;
 }
 
@@ -177,6 +201,19 @@ footer {
     .copyright {
         font-size: 13px;
     }
+
+    .portfolio-container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .portfolio-container h2{
+        order: 0;
+    }
+    .portfolio-container .portfolio-list{
+        order: 1;
+    }
+
 }
 
 @media screen and (max-width:600px){
