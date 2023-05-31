@@ -52,16 +52,16 @@ function AlchemistLab() {
     <div className="container">
       <header>        
         <h1>Kunal's Portfolio</h1>
-        <div className="logo-lIn">
+        <div className="get-connected">
           <a href={linkedIn_URL} target="blank">
-            <img  src={lIn} alt="linkedIn-profile"/>
+            <img src={lIn} alt="linkedIn-profile" className="button-image" />
           </a>
         </div>
       </header>
       <main>
       <div className="one-liner">
 
-        {refresh  ? "loading..." : <h1>{headline}</h1>}
+        {refresh  ? <div className='placeholder'><br/><br/></div> : <h1>{headline}</h1>}
         {/* <div className="quote-of-the-week">
           <div className="quote-box">
             <p className="quote-text">Thought of the week: Follow your passion!🐾</p>
@@ -70,10 +70,11 @@ function AlchemistLab() {
       </div>
 
         <section id="about">
+          <br/>
           <div className="about-content">
             <div className="about-text">
               <h2>About me</h2>
-              <p>{refresh  ? "loading..." : intro}</p>
+              {refresh  ? <div className='placeholder'>{new Array(6).fill(<br/>).map((br,i)=>br)}</div>: <p>{intro}</p>}
 
             </div>
             <div className="about-image">
@@ -83,9 +84,11 @@ function AlchemistLab() {
 
         </section>
         <section id="portfolio" className='portfolio-container'>
+          <div className="portfolio-heading">
+            <h2>Projects</h2>
+            {refresh  ? <div className='placeholder'>{new Array(6).fill(<br/>).map((br,i)=>br)}</div>: ""}
+          </div>
 
-          <h2>Portfolio {refresh? "(loading...)":""}</h2><br/>
-          
           <ul className="portfolio-list">
             {/* intentially added to get a diveder above the 1st project */}
             <li></li> 
@@ -115,7 +118,7 @@ function AlchemistLab() {
       <nav>
           <ul>
             <li><a href="#about">About</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#portfolio">Projects</a></li>
             <li><a href="#affiliations">Affiliations</a></li>
 
             <li><span class="construction-icon"><i class="fas fa-tools"></i>Tools</span></li>

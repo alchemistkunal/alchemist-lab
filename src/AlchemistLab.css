@@ -4,17 +4,21 @@
     margin-right: 5%;
     padding: 20px;
 }
-.container header{
+
+.container header {
     display: flex;
     align-items: normal;
 }
-.container h1{
+
+.container h1 {
     order: 0;
 }
-.container button{
+
+.container button {
     order: 1;
     margin-left: 40%;
 }
+
 body {
     background-color: hsla(169.06, 100%, 35.49%, 1);
     margin: 0;
@@ -22,21 +26,36 @@ body {
     color: white;
     font-size: 25px;
     scroll-behavior: smooth
-    /* font-family: Neue Hass Grotesk Display;  Open Sans */
+        /* font-family: Neue Hass Grotesk Display;  Open Sans */
 }
 
-.logo-lIn img {
-    float:right;
+
+.get-connected img {
+    float: right;
     padding: 20px;
     font-size: 30px;
     width: 50px;
     margin: 5px 2px;
+}
+
+.get-connected:hover {
+    opacity: 0.8;
+}
+
+@keyframes blink {
+    from {
+        opacity: 0.6;
+      }
+      to {
+        opacity: 0.4;
+      }
   }
   
-  .linkedinLogo:hover {
-      opacity: 0.8;
+  .placeholder {
+    background-color: #dbdcdd;
+    animation: blink 1s infinite alternate-reverse;
   }
-  
+
 
 header {
     text-align: left;
@@ -126,15 +145,17 @@ footer {
     /* margin-top: 50px; */
     /* font-size: 35px; */
 }
-
+.portfolio-heading {
+    flex: 1;
+}
 
 .construction-icon i {
     color: rgb(58, 48, 146);
     /* Set the icon color */
 }
 
-@media screen and (max-width:1200px){
-    
+@media screen and (max-width:1200px) {
+
     .about-profile-image {
 
         /* Set initial width to 100% */
@@ -143,9 +164,11 @@ footer {
         border-radius: 50%;
         margin-top: 5px;
     }
+
     .one-liner {
         font-size: 25px;
     }
+
     .about-text h2 {
         font-size: 25px;
     }
@@ -153,25 +176,29 @@ footer {
     body {
         font-size: 20px;
     }
-    
+
     .about-text p {
         font-size: 20px;
-    
+
     }
+
     .copyright {
         font-size: 15px;
     }
-    
+
 }
-@media screen and (max-width:800px){
+
+@media screen and (max-width:800px) {
     .about-content {
         display: flex;
         flex-direction: column;
     }
-    .about-content .about-image{
+
+    .about-content .about-image {
         order: 0;
     }
-    .about-content .about-text{
+
+    .about-content .about-text {
         order: 1;
     }
 
@@ -183,9 +210,11 @@ footer {
         border-radius: 50%;
         margin-top: 5px;
     }
+
     .one-liner {
         font-size: 22.5px;
     }
+
     .about-text h2 {
         font-size: 22.5px;
     }
@@ -193,31 +222,33 @@ footer {
     body {
         font-size: 18.5px;
     }
-    
+
     .about-text p {
         font-size: 18.5px;
-    
+
     }
+
     .copyright {
         font-size: 13px;
     }
 
-    .portfolio-container{
+    .portfolio-container {
         display: flex;
         flex-direction: column;
     }
 
-    .portfolio-container h2{
+    .portfolio-container h2 {
         order: 0;
     }
-    .portfolio-container .portfolio-list{
+
+    .portfolio-container .portfolio-list {
         order: 1;
     }
 
 }
 
-@media screen and (max-width:600px){
-    
+@media screen and (max-width:600px) {
+
     .about-profile-image {
 
         /* Set initial width to 100% */
@@ -226,23 +257,27 @@ footer {
         border-radius: 50%;
         margin-top: 5px;
     }
+
     .one-liner {
         font-size: 20px;
     }
+
     .about-text h2 {
         font-size: 20px;
     }
+
     body {
         font-size: 15px;
     }
+
     .about-text p {
         font-size: 15px;
-    
+
     }
 
     .copyright {
         font-size: 12px;
     }
-    
-    
+
+
 }
