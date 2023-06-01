@@ -25,7 +25,8 @@ body {
     padding: 0;
     color: white;
     font-size: 25px;
-    scroll-behavior: smooth
+    scroll-behavior: smooth;
+    overflow-x: hidden; /* Prevent horizontal scrollbar */
         /* font-family: Neue Hass Grotesk Display;  Open Sans */
 }
 
@@ -152,6 +153,34 @@ footer {
 .construction-icon i {
     color: rgb(58, 48, 146);
     /* Set the icon color */
+}
+
+.affiliation {
+    background-color: white;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    overflow: hidden;
+}
+
+.affiliation h2 {
+    color: black;
+    margin-left: 6.5%;
+    margin-right: 5%;
+}
+
+.current-affiliations{
+    color: black;
+    margin-left: 6.5%;
+    margin-right: 5%;
+    padding-top: 0.5%;
+}
+
+.current-affiliations img{
+    max-width: 100%;
+    object-fit: contain;
+}
+.current-affiliations img:hover{
+    opacity: 0.6;
 }
 
 @media screen and (max-width:1200px) {

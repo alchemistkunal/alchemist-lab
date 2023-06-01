@@ -1,11 +1,16 @@
 import React, { useState, useEffect }  from 'react';
-import './AlchemistLab.css';
-import profileImage from './resources/portrait.jpg'; // Replace with the actual path to your profile image
-import Project from './Project'; // Import the Project component
-import './logo.css'
 import axios from 'axios';
+
+import './AlchemistLab.css';
+import './logo.css'
+import Project from './Project';
+
 import { config } from './resources/config/config.js';
-import lIn from './resources/social-media/lIn.png'; // Replace with the actual path to your profile image
+import restdef from './resources/default_response.json'
+import lIn from './resources/social-media/lIn.png';
+import profileImage from './resources/portrait.jpg';
+import cox3 from './resources/company-logos/912.png';
+import fwb from './resources/project-images/fwb.svg';
 
 function importAll(r) {
   return r.keys().map(r);
@@ -16,18 +21,18 @@ function AlchemistLab() {
   const companyLogoFiles = importAll(
     require.context('./resources/company-logos', false, /\.(png|jpe?g|svg)$/)
   );
-
   const apiUrl = config.url.API_URL;
   const linkedIn_URL = config.url.LinkedIn_URL;
-  const [projects, setProjects] = useState([]);
-  const [headline, setHeadline] = useState("");
-  const [intro, setIntro] = useState("");
+  const default_response = restdef;
+  const [projects, setProjects] = useState(default_response.projects);
+  const [headline, setHeadline] = useState(default_response.gold_dust);
+  const [intro, setIntro] = useState(default_response.about_me);
 
   
   const [refresh, setRefresh] = useState(false);
   useEffect(() => {
     // Fetch the list of strings from the API
-    setRefresh(true);
+    setRefresh(false);
     
     axios.get(apiUrl)
       .then(response => {
@@ -38,10 +43,12 @@ function AlchemistLab() {
       })
       .catch(error => {
         console.error(error);
+        setProjects(default_response.projects);
+        setHeadline(default_response.gold_dust);
+        setIntro(default_response.about_me);
       }).finally(()=> {
         setRefresh(false);
-        
-
+      
       });
     
 
@@ -102,16 +109,22 @@ function AlchemistLab() {
 
         <section id="affiliations" className="affiliation">
 
-            <h2>Past Affiliations</h2><br/><br/>
+            <h2>Past Affiliations</h2><br/>
 
             <div className="logo-container">
               {companyLogoFiles.map((logo, index) => (
                 <img src={logo} alt={`Company ${index + 1}`} key={index} onContextMenu={(e) => e.preventDefault()} />
               ))}
             </div>
-       
+            <div className='current-affiliations'>
+              <h3>Current Affiliations</h3>
+              <ul>
+                <li><span>Community Host at</span> <a href='https://www.ourfamilywithoutborders.com/about' target="blank"><img src={fwb} style={{ width: '200px' }}/></a></li>
+                <li><span>Generative AI initiatives with</span> <a href='https://app.takeaction.ai' target="blank"><img src={cox3} style={{ width: '70px' }}/></a></li>
+              </ul>
+            </div>
+            
         </section>
-
 
       </main>
       <footer>
