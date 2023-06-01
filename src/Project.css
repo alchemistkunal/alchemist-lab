@@ -4,34 +4,29 @@
     position: relative;
 }
 
-.project:hover {
-    opacity: 1;
-}
-
 .project h3 {
     cursor: pointer;
 }
 
-.project::after {
-    content: "+";
-    position: absolute;
-    top: 0;
-    right: 0;
-    font-size: 2.0em;
+.project-expand {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.project-toggle{
+    font-size: 35px;
 }
 
 
 .portfolio-list {
     list-style-type: none;
-    /* margin-left: 10%;
-    max-width: 90%; */
     padding-left: 5%;
 }
 
 .portfolio-list li {
-    margin-bottom: 1%;
+    /* margin-bottom: 1%; */
     border-bottom: 3px solid #ccc;
-    padding-bottom: 1%;
+    /* padding-bottom: 1%; */
 }
 
 
@@ -46,20 +41,14 @@
     /* Change order of the image */
 }
 
-
-
 .project-content-image img {
     height: auto;
     width: 250px;
     object-fit: contain;
-    /* or object-fit: cover; */
     padding-left: 10px;
     order: 1;
     max-width: 80%;
-
 }
-
-
 
 .project-image {
     width: 50%;
@@ -67,6 +56,9 @@
 }
 
 @media screen and (max-width: 1200px) {
+    .project-toggle{
+        font-size: 30px;
+    }
     .project-content-image {
         display: flex;
         /* Change to default display value for smaller screens */
@@ -95,6 +87,9 @@
 
 
 @media screen and (max-width:600px) {
+    .project-toggle{
+        font-size: 25px;
+    }
     .project-content-image {
         display: flex;
         /* Change to default display value for smaller screens */

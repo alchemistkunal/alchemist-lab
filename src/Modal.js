@@ -5,17 +5,18 @@ import "./Modal.css";
 const Modal = ({ setIsOpen, field }) => {
   const f1 = field.split('#');
   return (
-    // onClick={() => setIsOpen(false)} 
+      // onClick={() => setIsOpen(false)} 
       <div className="modal-container" >
 
         <p>{f1[0].trim()}<br /><br /></p>
         <ul className="modalContent">
           {f1.slice(1).map((part, index) => (
-            <li key={index}>{part.trim()}</li>
+            <li key={index}  style={{ marginBottom: '10px' }}>{part.trim()}</li>
           ))}
         </ul>
+        <br />
       </div>
-
+  
     
     
   );
