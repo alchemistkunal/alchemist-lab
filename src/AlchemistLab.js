@@ -109,20 +109,20 @@ function AlchemistLab() {
 
         <section id="affiliations" className="affiliation">
 
-            <h2>Past Affiliations</h2><br/>
+            <h2>Affiliations</h2><br/>
 
             <div className="logo-container">
               {companyLogoFiles.map((logo, index) => (
                 <img src={logo} alt={`Company ${index + 1}`} key={index} onContextMenu={(e) => e.preventDefault()} />
               ))}
             </div>
-            <div className='current-affiliations'>
+            {/* <div className='current-affiliations'>
               <h3>Current Affiliations</h3>
               <ul>
                 <li><span>Community Host at</span> <a href='https://www.ourfamilywithoutborders.com/about' target="blank"><img src={fwb} style={{ width: '200px' }}/></a></li>
                 <li><span>Generative AI initiatives with</span> <a href='https://app.takeaction.ai' target="blank"><img src={cox3} style={{ width: '70px' }}/></a></li>
               </ul>
-            </div>
+            </div> */}
             
         </section>
 
@@ -138,7 +138,7 @@ function AlchemistLab() {
 
           </ul>
         </nav>
-        <p className='copyright'>&copy; 2023 @|c)-(3m!5t's Lab. All rights reserved.</p>
+        <p className='copyright'>&copy; 2024 @|c)-(3m!5t's Lab. All rights reserved.</p>
       </footer>
     </div>
   );

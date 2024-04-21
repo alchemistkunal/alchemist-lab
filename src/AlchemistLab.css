@@ -168,7 +168,7 @@ footer {
     margin-right: 5%;
 }
 
-.current-affiliations{
+/* .current-affiliations{
     color: black;
     margin-left: 6.5%;
     margin-right: 5%;
@@ -181,7 +181,7 @@ footer {
 }
 .current-affiliations img:hover{
     opacity: 0.6;
-}
+} */
 
 @media screen and (max-width:1200px) {
 
